@@ -1,5 +1,6 @@
 .hero{
     height: 700px;
+    display: inline-flex;
 }
 
 .join-box{
@@ -9,4 +10,10 @@
     font-weight: 400;
     font-size: larger;
     width: 500px
+}
+
+.image{
+    height: 350px;
+    margin-left: 250px;
+    margin-top: 150px;
 }

@@ -31,7 +31,7 @@
 
 #register{
     background-color: #ffffff;
-    padding: 5px 10px;
+    padding: 10px 10px;
     border-radius: 4px;
     color: rgb(0, 0, 0);
     margin-right: 20px;
@@ -46,4 +46,9 @@ button{
 .logo{
     height: 32px;
     width: auto;
+}
+
+.logo:hover{
+    transition: all 0.2s ease;
+    transform: translateY(-2px);
 }
