@@ -1,0 +1,12 @@
+.hero{
+    height: 700px;
+}
+
+.join-box{
+    color: black;
+    margin-top: 200PX;
+    margin-left: 100px;
+    font-weight: 400;
+    font-size: larger;
+    width: 500px
+}
