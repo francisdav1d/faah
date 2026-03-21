@@ -27,3 +27,17 @@
     color: white;
     transform: translateY(-1px);
 }
+
+#register{
+    background-color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: rgb(0, 0, 0);
+    margin-right: 20px;
+}
+
+button{
+    border-style: none;
+    background-color: black;
+    color: white;
+}
