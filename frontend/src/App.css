@@ -1,25 +1,27 @@
 @font-face {
-    font-family: "Playfair";
-    src: url("./assets/fonts/") format("truetype");
-    font-weight: 400;
+    font-family: "Tara";
+    src: url("./assets/fonts/tara-font-family/Tara-Bold.otf") format("opentype");
+    font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "Playfair";
-    src: url("./assets/fonts/PlayfairDisplay-Italic.ttf") format("truetype");
-    font-weight: 400;
-    font-style: italic;
+    font-family: "Tara";
+    src: url("./assets/fonts/tara-font-family/Tara-Medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: "Inter";
-    src: url("./assets/fonts/Inter-Regular.ttf") format("truetype");
+    font-family: "Tara";
+    src: url("./assets/fonts/tara-font-family/Tara-Regular.otf") format("opentype");
     font-weight: 400;
+    font-style: normal;
 }
 
 body{
     background-color: rgb(12, 12, 12);
     color: #e5e2e1;
     margin:0;
+    font-family: "Tara", Arial, sans-serif;
 }
