@@ -5,8 +5,8 @@ function Hero(){
         <section className="hero">
 
             <h1 className="hero-title">
-                YOUR MUSIC.<br/>
-                THEIR EARS.
+                YOUR MUSIC<br/>
+                THEIR EARS
             </h1>
 
             <p className="hero-subtext">
