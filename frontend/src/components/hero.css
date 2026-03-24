@@ -1,6 +1,10 @@
 .hero{
     padding:140px 60px;
     background:#0a0a0a;
+    background-image:
+    linear-gradient(rgba(10,10,10,0.85), rgba(10,10,10,0.95)),
+    url("../assets/bg.png");
+
 }
 
 .hero-title{
