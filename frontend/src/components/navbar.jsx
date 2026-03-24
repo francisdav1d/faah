@@ -6,12 +6,11 @@ export default function Navbar(){
         <div className="navbar">
             <img src={logo} alt="Logo" className="logo"/>
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>TOP Artists</li>
-                |
-                <li><button id="login-btn">Login</button></li>
-                <li><button id="register">Register</button></li>
+                <li>TRACK</li>
+                <li>SHARE</li>
+                <li>ROOMS</li>
+                <li>COLLECTIVE</li>
+                <button id="btn">GET EARLY ACCESS</button>
             </ul>
         </div>
     )
