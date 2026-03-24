@@ -6,6 +6,11 @@
     padding: 15px 15px;
 }
 
+.navbar{
+    padding:20px 60px;
+    background:#0a0a0a;
+}
+
 .logo{
     height:32px;
 }
@@ -17,6 +22,12 @@
     gap:30px;
     margin:0;
     padding:0;
+}
+
+.nav-links li{
+    font-family:"Tara";
+    font-size:12px;
+    letter-spacing:1px;
 }
 
 .nav-links li{
@@ -32,11 +43,12 @@
 }
 
 #btn{
-    padding:8px 14px;
-    border:none;
-    background-color:#c0392b;
-    color:white;
-    font-size:12px;
-    border-radius:1px;
-    cursor:pointer;
+    border: none;
+    color: white;
+    border-radius: 1px;
+    cursor: pointer;
+    background: #c0392b;
+    padding: 14px 22px;
+    font-size: 12px;
+    letter-spacing: 1px;
 }

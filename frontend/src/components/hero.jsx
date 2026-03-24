@@ -2,13 +2,32 @@ import "./hero.css"
 
 function Hero(){
     return(
-        <div className="box-1">
-            <h1>YOUR MUSIC</h1>
-            <h1>THEIR EARS</h1>
+        <section className="hero">
 
-            <p id="para">The platform for high-fidelity social listening and ritualistic track discovery.</p>
-        </div>
+            <h1 className="hero-title">
+                YOUR MUSIC.<br/>
+                THEIR EARS.
+            </h1>
+
+            <p className="hero-subtext">
+                The platform for high-fidelity social listening
+                and ritualistic track discovery.
+            </p>
+
+            <div className="hero-actions">
+
+                <button className="primary-btn">
+                    GET EARLY ACCESS
+                </button>
+
+                <span className="secondary-link">
+                    SEE HOW IT WORKS
+                </span>
+
+            </div>
+
+        </section>
     )
 }
 
-export default Hero;
+export default Hero

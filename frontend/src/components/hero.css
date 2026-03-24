@@ -1,12 +1,44 @@
-.box-1{
-    display: block;
-    margin: 130px 70px;
-    font-size: 20px;
-    font-family: "NewsReader" , serif;
-    font-weight: 900;
-    font-size: 40px;
+.hero{
+    padding:140px 60px;
+    background:#0a0a0a;
 }
 
-#para{
-    font-size: 20px;
+.hero-title{
+    font-family:"Newsreader", serif;
+    font-style:italic;
+    font-size:150px;
+    letter-spacing:-2px;
+    line-height:0.9;
+    max-width:100%;
+}
+
+.hero-subtext{
+    margin-top:30px;
+    max-width:420px;
+    color:#a1a1aa;
+    font-size:20px;
+    line-height:1.6;
+}
+
+.hero-actions{
+    margin-top:40px;
+    display:flex;
+    gap:30px;
+    align-items:center;
+}
+
+.primary-btn{
+    background:#c0392b;
+    color:white;
+    border:none;
+    padding:14px 22px;
+    font-size:12px;
+    letter-spacing:1px;
+}
+
+.secondary-link{
+    font-size:12px;
+    border-bottom:1px solid #e5e2e1;
+    padding-bottom:4px;
+    cursor:pointer;
 }
