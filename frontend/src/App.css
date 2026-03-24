@@ -1,3 +1,23 @@
+@font-face {
+    font-family: "Playfair";
+    src: url("./assets/fonts/") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Playfair";
+    src: url("./assets/fonts/PlayfairDisplay-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("./assets/fonts/Inter-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
 body{
     background-color: rgb(12, 12, 12);
     color: #e5e2e1;
