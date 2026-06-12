@@ -1,5 +1,6 @@
 import "./navbar.css"
 import logo from "../../assets/react.svg"
+import { Link } from 'react-router-dom'
 
 export default function Navbar(){
     return(
@@ -14,7 +15,7 @@ export default function Navbar(){
                 <li>COLLECTIVE</li>
             </ul>
 
-            <button id="btn">GET EARLY ACCESS</button>
+            <Link to="/login"><button id="btn">GET EARLY ACCESS</button></Link>
 
         </div>
     )
