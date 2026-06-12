@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RESONATOR | ENTER THE VOID</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#454747",
+                    "tertiary-container": "#6a6a6a",
+                    "tertiary": "#c8c6c6",
+                    "on-surface": "#e5e2e1",
+                    "on-error-container": "#ffdad6",
+                    "error": "#ffb4ab",
+                    "surface-container-highest": "#353534",
+                    "on-error": "#690005",
+                    "inverse-primary": "#b02d21",
+                    "primary-fixed-dim": "#ffb4a9",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "surface-bright": "#3a3939",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "on-secondary-fixed-variant": "#454747",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "secondary-fixed": "#e2e2e2",
+                    "outline": "#a88a85",
+                    "tertiary-fixed-dim": "#c8c6c6",
+                    "surface-container-high": "#2a2a2a",
+                    "on-tertiary-container": "#edebea",
+                    "on-primary-container": "#ffe5e1",
+                    "on-tertiary": "#303030",
+                    "tertiary-fixed": "#e4e2e1",
+                    "inverse-on-surface": "#313030",
+                    "primary-fixed": "#ffdad5",
+                    "on-background": "#e5e2e1",
+                    "secondary": "#c6c6c7",
+                    "primary": "#ffb4a9",
+                    "surface": "#131313",
+                    "error-container": "#93000a",
+                    "surface-dim": "#131313",
+                    "background": "#131313",
+                    "primary-container": "#c0392b",
+                    "on-surface-variant": "#e1bfb9",
+                    "surface-container": "#201f1f",
+                    "surface-container-low": "#1c1b1b",
+                    "surface-tint": "#ffb4a9",
+                    "inverse-surface": "#e5e2e1",
+                    "on-secondary-container": "#b4b5b5",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-secondary": "#2f3131",
+                    "on-primary": "#690001",
+                    "surface-variant": "#353534",
+                    "outline-variant": "#59413d",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "on-primary-fixed": "#410000",
+                    "on-primary-fixed-variant": "#8e130c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "display": ["Newsreader", "serif"],
+                    "body": ["Space Grotesk", "monospace"],
+                    "label": ["Space Grotesk", "monospace"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0a0a0a;
+            color: #e5e2e1;
+            font-family: 'Space Grotesk', monospace;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .grain-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 10;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+        .watermark-r {
+            position: fixed;
+            bottom: -5vh;
+            right: -5vw;
+            font-family: 'Newsreader', serif;
+            font-size: 80vh;
+            line-height: 1;
+            font-weight: 800;
+            color: #131313;
+            z-index: 0;
+            user-select: none;
+            font-style: italic;
+        }
+        .input-underline {
+            border: none;
+            border-bottom: 1px solid rgba(168, 138, 133, 0.2);
+            background: transparent !important;
+            border-radius: 0 !important;
+            padding-left: 0;
+            padding-right: 0;
+            transition: border-color 0.2s ease;
+        }
+        .input-underline:focus {
+            outline: none;
+            box-shadow: none;
+            border-color: #c0392b;
+        }
+        /* Custom Checkbox */
+        input[type="checkbox"] {
+            appearance: none;
+            background-color: transparent;
+            margin: 0;
+            font: inherit;
+            color: #c0392b;
+            width: 1.15em;
+            height: 1.15em;
+            border: 1px solid rgba(168, 138, 133, 0.4);
+            display: grid;
+            place-content: center;
+            border-radius: 0;
+        }
+        input[type="checkbox"]::before {
+            content: "";
+            width: 0.65em;
+            height: 0.65em;
+            transform: scale(0);
+            transition: 120ms transform ease-in-out;
+            box-shadow: inset 1em 1em #c0392b;
+        }
+        input[type="checkbox"]:checked::before {
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body class="selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
+<div class="grain-overlay"></div>
+<div aria-hidden="true" class="watermark-r">R</div>
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface flex justify-between items-center px-8 h-20 w-full">
+<div class="font-display text-3xl font-black text-primary-container tracking-tighter">RESONATOR</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-on-surface-variant font-label uppercase text-xs tracking-widest hover:text-primary transition-colors duration-0" href="#">DISCOVER</a>
+<a class="text-on-surface-variant font-label uppercase text-xs tracking-widest hover:text-primary transition-colors duration-0" href="#">COMMUNITY</a>
+<a class="text-on-surface-variant font-label uppercase text-xs tracking-widest hover:text-primary transition-colors duration-0" href="#">ARCHIVE</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-on-surface hover:text-primary-container transition-colors" data-icon="search">search</button>
+<button class="bg-primary-container text-on-primary-container font-label text-xs font-bold px-5 py-2 hover:bg-primary-fixed transition-colors duration-0">JOIN</button>
+<button class="material-symbols-outlined text-on-surface md:hidden" data-icon="menu">menu</button>
+</div>
+</header>
+<main class="relative z-20 min-h-screen flex items-center justify-center pt-20 pb-12 px-6">
+<div class="w-full max-w-md bg-transparent">
+<!-- Header Section -->
+<div class="mb-12">
+<p class="font-label text-[0.6875rem] uppercase tracking-[0.3em] text-outline mb-4">ACCESS PORTAL</p>
+<h1 class="font-display text-6xl font-bold tracking-tight text-on-surface leading-[0.9]">
+                    BACK TO THE <br/>
+<span class="italic text-primary-container">NOISE</span>
+</h1>
+</div>
+<!-- Login Form -->
+<form class="space-y-10" onsubmit="event.preventDefault();">
+<!-- Email Field -->
+<div class="group">
+<label class="block font-label text-[0.6875rem] uppercase tracking-widest text-on-surface-variant mb-2 group-focus-within:text-primary-container transition-colors" for="email">Email Address</label>
+<input class="input-underline w-full text-on-surface font-body text-lg" id="email" name="email" placeholder="name@domain.com" required="" type="email"/>
+</div>
+<!-- Password Field -->
+<div class="group">
+<div class="flex justify-between items-end mb-2">
+<label class="block font-label text-[0.6875rem] uppercase tracking-widest text-on-surface-variant group-focus-within:text-primary-container transition-colors" for="password">Password</label>
+<a class="font-label text-[0.6875rem] uppercase tracking-widest text-primary-container hover:text-on-surface transition-colors" href="#">Forgot Password?</a>
+</div>
+<input class="input-underline w-full text-on-surface font-body text-lg" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+</div>
+<!-- Remember Me -->
+<div class="flex items-center gap-3">
+<input id="remember" name="remember" type="checkbox"/>
+<label class="font-label text-[0.6875rem] uppercase tracking-widest text-secondary cursor-pointer select-none" for="remember">Remember this device</label>
+</div>
+<!-- CTA -->
+<div class="pt-4">
+<button class="w-full bg-primary-container text-on-primary-container font-label font-bold py-5 text-sm uppercase tracking-[0.2em] hover:bg-[#ffdad5] active:bg-[#ffdad5] transition-colors duration-0" type="submit">
+                        ENTER THE VOID
+                    </button>
+<div class="mt-8 text-center">
+<p class="font-label text-[0.75rem] tracking-widest text-secondary opacity-60">
+                            New here? <a class="text-on-surface underline underline-offset-4 decoration-1 hover:text-primary-container transition-colors" href="#">Join the collective.</a>
+</p>
+</div>
+</div>
+</form>
+</div>
+</main>
+<!-- Footer -->
+<footer class="relative z-20 w-full py-12 bg-surface-container-lowest flex flex-col md:flex-row justify-between items-center px-8 border-t border-outline-variant/15">
+<div class="font-display italic text-on-surface mb-6 md:mb-0">RESONATOR</div>
+<div class="flex flex-wrap justify-center gap-8 mb-6 md:mb-0">
+<a class="font-label text-xs uppercase tracking-widest text-secondary opacity-60 hover:text-on-surface hover:opacity-100 transition-opacity" href="#">MANIFESTO</a>
+<a class="font-label text-xs uppercase tracking-widest text-secondary opacity-60 hover:text-on-surface hover:opacity-100 transition-opacity" href="#">PRIVACY</a>
+<a class="font-label text-xs uppercase tracking-widest text-secondary opacity-60 hover:text-on-surface hover:opacity-100 transition-opacity" href="#">TERMS</a>
+<a class="font-label text-xs uppercase tracking-widest text-secondary opacity-60 hover:text-on-surface hover:opacity-100 transition-opacity" href="#">CONTACT</a>
+</div>
+<div class="font-label text-xs uppercase tracking-widest text-outline opacity-40">
+            © 2024 RESONATOR. THE UNDERGROUND LIVES.
+        </div>
+</footer>
+<script>
+        // Micro-interaction: Smooth hover effect for the main CTA
+        const btn = document.querySelector('button[type="submit"]');
+        btn.addEventListener('mouseover', () => {
+            btn.style.letterSpacing = '0.3em';
+        });
+        btn.addEventListener('mouseleave', () => {
+            btn.style.letterSpacing = '0.2em';
+        });
+
+        // Add subtle parallax to the watermark R
+        window.addEventListener('mousemove', (e) => {
+            const r = document.querySelector('.watermark-r');
+            const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
+            const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
+            r.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        });
+    </script>
+</body></html>
